@@ -3,7 +3,7 @@
 仅仅是收集一下京东双十一全名营业每秒产生的金币
 
 每小时的第20分运行一次
-20 * * * * https://raw.githubusercontent.com/lxk0301/scripts/master/jd_collectProduceScore.js
+20 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_collectProduceScore.js
  */
 const $ = new Env('京东全民营业领金币');
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -46,11 +46,17 @@ async function collectProduceScore() {
   if ($.secretp) {
     const temp = {
       "taskId": "collectProducedCoin",
-      "rnd": "",
+      "rnd": getRnd(),
       "inviteId": "-1",
       "stealId": "-1"
     }
-    const body = encode(temp, $.secretp);
+    const extraData = {
+      "jj": 6,
+      "buttonid": "jmdd-react-smash_0",
+      "sceneid": "homePageh5",
+      "appid": '50073'
+    }
+    const body = encode(temp, $.secretp, extraData);
     await stall_collectProduceScore(body);
   }
 }
@@ -66,6 +72,8 @@ function stall_collectProduceScore(body) {
             data = JSON.parse(data);
             if (data && data.data.bizCode === 0) {
               console.log(`京东账号${$.index} ${$.UserName}成功收集金币:${data.data.result.produceScore}个`)
+            } else {
+              console.log(`京东账号${$.index} ${$.UserName}成功收集金币失败:${data.data.bizMsg}`)
             }
           } else {
             console.log(`请检查自身设备原因`);
@@ -100,13 +108,16 @@ function getHomeData() {
     })
   })
 }
-function encode(data, aa) {
+function encode(data, aa, extraData) {
   const temp = {
-    "extraData": "{}",
-    "businessData": (JSON.stringify(data)),
+    "extraData": JSON.stringify(extraData),
+    "businessData": JSON.stringify(data),
     "secretp": aa,
   }
   return { "ss": (JSON.stringify(temp)) };
+}
+function getRnd() {
+  return Math.floor(1e6 * Math.random()).toString();
 }
 function taskPostUrl(functionId, body = {}) {
   return {

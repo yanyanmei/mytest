@@ -3,8 +3,31 @@
   "name": "lxk0301脚本订阅",
   "author": "@lxk0301",
   "icon": "https://avatars0.githubusercontent.com/u/21308593?s=52&v=4",
-  "repo": "https://github.com/lxk0301/scripts/",
+  "repo": "https://github.com/lxk0301/jd_scripts/",
   "apps": [
+    {
+      "id": "JD_Cookies",
+      "name": "京东多账号 Ck 管理",
+      "keys": ["CookiesJD"],
+      "settings": [
+        {
+          "id": "CookiesJD",
+          "name": "CK 列表",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 8,
+          "desc": "CK 列表 (JSON 格式)"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra.js"
+    },
     {
       "id": "jd_fruit",
       "name": "东东农场",
@@ -110,8 +133,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png"
@@ -228,8 +251,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png"
@@ -314,8 +337,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png"
@@ -331,7 +354,14 @@
           "name": "静默运行",
           "val": true,
           "type": "boolean",
-          "desc": "运行宠汪汪脚本时不发出系统弹窗通知"
+          "desc": "运行宠汪汪(jd_joy.js)脚本时不发出系统弹窗通知"
+        },
+        {
+          "id": "jdJoyStealNotify",
+          "name": "静默运行",
+          "val": false,
+          "type": "boolean",
+          "desc": "运行宠汪汪(jd_joy_steal.js)脚本时不发出系统弹窗通知"
         },
         {
           "id": "jdJoyHelpFeed",
@@ -381,8 +411,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
@@ -413,14 +443,22 @@
             },
             {
               "key": "1",
-              "label": "兑换京豆"
+              "label": "兑换20京豆"
+            },
+            {
+              "key": "500",
+              "label": "兑换500京豆"
+            },
+            {
+              "key": "1000",
+              "label": "兑换1000京豆"
             }
           ]
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
@@ -484,8 +522,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
@@ -512,8 +550,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdyqs_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdyqs.png"
@@ -533,8 +571,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdjs_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdjs.png"
@@ -585,8 +623,8 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js",
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
@@ -692,11 +730,11 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
+      "repo": "https://github.com/lxk0301/jd_scripts",
       "scripts":[
         {
           "name" : "京小超",
-          "script" : "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js"
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
         }
       ],
       "icons": [
@@ -710,7 +748,7 @@
       "keys": [
         "coinToBeans"
       ],
-      "desc": "默认不兑换奖品,例如:兑换20京豆输入20,兑换1000京豆输入1000,兑换 '柠檬果香洗手液' 输入'柠檬果香洗手液',奖品名称去京小超活动页面查看",
+      "desc": "默认不兑换奖品,例如:兑换20京豆输入20,兑换1000京豆输入1000,兑换 柠檬果香洗手液， 输入 柠檬果香洗手液。其他详细的奖品名称去京小超活动页面查看",
       "settings": [
         {
           "id": "jdSuperMarketRewardNotify",
@@ -728,11 +766,11 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
+      "repo": "https://github.com/lxk0301/jd_scripts",
       "scripts": [
         {
           "name" : "京小超兑换奖品",
-          "script" : "https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js"
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
         }
       ],
       "icons": [
@@ -780,11 +818,50 @@
         }
       ],
       "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/scripts/master/backUp/webhook.js",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/webhook.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/webhooks_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/webhooks.png"
+      ]
+    },
+    {
+      "id": "xmSports",
+      "name": "小米运动",
+      "keys": [
+        "xmSportsToken",
+        "xmMinStep",
+        "xmMaxStep"
+      ],
+      "settings": [
+        {
+          "id": "xmSportsToken",
+          "name": "小米运动Token",
+          "val": "",
+          "type": "text",
+          "desc": "小米运动登录时获取的token"
+        },
+        {
+          "id": "xmMinStep",
+          "name": "最小运动步数",
+          "val": "19000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:19000"
+        },
+        {
+          "id": "xmMaxStep",
+          "name": "最大运动步数",
+          "val": "25000",
+          "type": "text",
+          "desc": "需要修改最小的运动步数的数字,例如:25000"
+        }
+      ],
+      "author": "@lxk0301",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/xmyd.png"
       ]
     }
   ]

@@ -28,7 +28,6 @@ jobs:
           npm install
       - name: '运行 【京豆签到脚本】'
         run: |  
-          cd ~/scripts
           npm install 
           node jd_bean_sign.js
           node jd_bean_home.js
